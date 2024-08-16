@@ -26,6 +26,7 @@ int vcnl_i2c_write(uint8_t cc, uint8_t lower_byte, uint8_t upper_byte)
 
 int vcnl_i2c_read(uint8_t cc, uint8_t *data)
 {
-    i2c_write_rec(&cc, 1, data, 2);
+    i2c_write(&cc, 1);
+    i2c_read(data, 2);
     return 0;
 }
