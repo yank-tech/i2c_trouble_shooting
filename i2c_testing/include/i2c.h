@@ -16,7 +16,7 @@
 #define I2C_SCL_GPIO 33
 #define I2C_PORT -1 // I think this is fine to do
 
-#define I2C_SENSOR_0_ADDR 0x40
+#define I2C_SENSOR_0_ADDR 0x60
 #define I2C_SENSOR_1_ADDR 0x41
 #define I2C_SENSOR_2_ADDR 0x42
 #define I2C_SENSOR_3_ADDR 0x43
