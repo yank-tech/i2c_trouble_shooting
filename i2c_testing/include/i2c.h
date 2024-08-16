@@ -51,19 +51,18 @@ typedef enum {BUS_V, SHUNT_V, CURRENT_mA, POWER_mW} i2c_req;
 int init_i2c();
 
 // Do we ever need to write?
-int i2c_write();
+int i2c_write(uint8_t *data, uint8_t length);
+int i2c_write_rec(uint8_t *d, uint8_t l, uint8_t *d2, uint8_t l2);
 // would we ever read without write
 // to make sure the register is correct?
-int i2c_read();
+int i2c_read(uint8_t *data, uint8_t length);
 int i2c_config();
 
 
-int i2c_get_value(i2c_sensor sensor, i2c_req req, double *ret);
 
 void test_i2c();
 void init_test_i2c();
 
-uint16_t cal_sensor(double rshunt, double max_expect, i2c_sensor sensor);
 #endif
 
 
