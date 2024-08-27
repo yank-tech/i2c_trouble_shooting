@@ -69,6 +69,8 @@ int i2c_write(uint8_t *data, uint8_t length)
 
 int i2c_write_rec(uint8_t *data_send, uint8_t data_send_length, uint8_t *data_rec, uint8_t data_rec_length)
 {
+    //printf("data send is %x\n", *data_send);
+    //printf("current data is %x, %x\n", data_rec[0], data_rec[1]);
     i2c_master_transmit_receive(sensor_handle_0, data_send, data_send_length, data_rec, data_rec_length, 10);
     return 0;
 }
